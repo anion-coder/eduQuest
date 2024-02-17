@@ -1,0 +1,423 @@
+@import "./_variables";
+
+#container {
+    max-width: 200px;
+
+  }
+  
+  .bruh {
+    font-family: $fontFamily, sans-serif;
+    letter-spacing: 2px;
+    font-size: large;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 200px;
+    color: #000;
+    border: 3px solid;
+    padding: 0.5em 1.5em;
+    -moz-box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    -webkit-box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+  }
+  .bruh:active {
+    -moz-box-shadow: 0px 0px 0px 0px;
+    -webkit-box-shadow: 0px 0px 0px 0px;
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+  }
+  .bruh:hover{
+    cursor: pointer;
+  }
+
+body {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    margin-left: 11rem;
+    font-family: $fontFamily;
+    background-color: $veryLightGreen;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type=file]::file-selector-button {
+    margin-right: 20px;
+    border: none;
+    font-size: large;
+    background: #084cdf;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+  }
+  
+  input[type=file]::file-selector-button:hover {
+    background: #0d45a5;
+  }
+
+  :root {
+    --color-light: white;
+    --color-dark: #212121;
+    --color-signal: #fab700;
+    
+    --color-background: var(--color-light);
+    --color-text: var(--color-dark);
+    --color-accent: var(--color-signal);
+    
+    --size-bezel: .5rem;
+    --size-radius: 4px;
+    
+    line-height: 1.4;
+    
+    font-family: 'Inter', sans-serif;
+    font-size: calc(.6rem + .4vw);
+    color: var(--color-text);
+    background: var(--color-background);
+    font-weight: 300;
+    padding: 0 calc(var(--size-bezel) * 3);
+  }
+
+  h1, h2, h3 {
+    font-weight: 900;
+  }
+  
+  mark {
+    background: var(--color-accent);
+    color: var(--color-text);
+    font-weight: bold;
+    padding: 0 0.2em;
+  }
+  
+  .card {
+    margin: 50px;
+    background: var(--color-background);
+    padding: calc(4 * var(.5rem));
+    padding-bottom: 100px;
+    margin-top: calc(4 * var(.5rem));
+    border-radius: 4px;
+    width: 70%;
+    border: 3px solid var(--color-shadow, currentColor);
+    box-shadow: .5rem .5rem 0 var(--color-shadow, currentColor);
+    
+    
+    *:first-child {
+      margin-top: 0;
+    }
+  }
+  
+  
+  .l-design-widht {
+    max-width: 40rem;
+    padding: 1rem;
+  }
+  
+  .input {
+    position: relative;
+    &__field {
+      box-sizing: border-box;
+      margin: 10px;
+      font-size: large;
+      font-family: $fontFamily;
+      display: block;
+      width: 90%;
+      border: 3px solid currentColor;
+      padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+      color: currentColor;
+      background: transparent;
+      border-radius: var(--size-radius);
+      
+      &:focus,
+      &:not(:placeholder-shown) {
+        & + .input__label {
+          transform: translate(.25rem, -65%) scale(.8);
+          color: var(--color-accent);
+        }
+      }
+    }
+  }
+  
+  .drop-container {
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 50%;
+    margin: 20px;
+    display: inline-flex;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px dashed #555;
+    color: #444;
+    cursor: pointer;
+    transition: background .2s ease-in-out, border .2s ease-in-out;
+  }
+  
+  .drop-container:hover {
+    background: #eee;
+    border-color: #111;
+  }
+  
+  .drop-container:hover .drop-title {
+    color: #222;
+  }
+  
+  .drop-title {
+    color: #444;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: color .2s ease-in-out;
+  }
+  
+.pushable {
+    background: $darkGreen;
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+  }
+  .front {
+    display: block;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    background: $green;
+    color: white;
+    transform: translateY(-6px);
+  }
+
+  .pushable:active .front {
+    transform: translateY(-2px);
+  }
+.sidebar {
+    background-color: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2rem 3rem;
+    width: 15rem;
+    height: 100vh;
+    transition: 0.5s all;
+
+    .logoContainer {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        h2.title {
+            font-size: 31.42px;
+            color: $green;
+            padding: 0 0 0 1rem;
+        }
+    }
+
+    .burgerContainer {
+        content: "";
+        background-color: $green;
+        position: absolute;
+        right: (-35px / 2);
+        top: calc(9rem / 1.15);
+        width: 35px;
+        height: 35px;
+        border-radius: 2rem;
+        z-index: 1;
+
+        .burgerTrigger {
+            content: "";
+            width: 35px;
+            height: 35px;
+            background-color: red;
+            cursor: pointer;
+            z-index: 6;
+            opacity: 0;
+            position: relative;
+        }
+
+        .burgerMenu {
+            content: "";
+            background-color: $green;
+            position: relative;
+            z-index: 1;
+            width: 20px;
+            height: 3px;
+            border-radius: 2rem;
+            bottom: calc(35px / 2);
+            left: 0.45rem;
+            transition: 0.5s all;
+        }
+
+        .burgerMenu::after {
+            content: "";
+            background-color: $white;
+            position: absolute;
+            width: 20px;
+            height: 3px;
+            border-radius: 2rem;
+            top: 0.4rem;
+            transform: translateY(-0.4rem) rotate(45deg);
+            transition: 0.5s all;
+        }
+
+        .burgerMenu::before {
+            content: "";
+            background-color: $white;
+            position: absolute;
+            width: 20px;
+            height: 3px;
+            border-radius: 2rem;
+            top: -0.4rem;
+            transform: translateY(0.4rem) rotate(-45deg);
+            transition: 0.5s all;
+        }
+    }
+
+    .burgerContainer::after {
+        content: "";
+        position: absolute;
+        right: 35px;
+        top: (35px / 2);
+        z-index: 0;
+        width: calc(6rem + 15rem);
+        background-color: $lightGrey;
+        height: 2px;
+        transition: 0.5s all;
+    }
+
+    .profileContainer {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 3rem 0 0 0;
+
+        img {
+            width: auto;
+            height: 3rem;
+        }
+
+        .profileContents {
+            padding: 0 0 0 1rem;
+
+            p.name {
+                padding: 0;
+                margin: 0;
+                font-size: 16.7px;
+                color: $darkGrey;
+                text-transform: capitalize;
+                font-weight: $heavyFont;
+            }
+
+            p {
+                padding: 0;
+                margin: 0;
+                font-size: 13.9px;
+                color: $darkGrey;
+                text-transform: lowercase;
+            }
+        }
+    }
+
+    .contentsContainer {
+        margin: 2rem 0 0 0;
+
+        ul {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-direction: column;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                flex-direction: row;
+                margin: 0.75rem 0;
+                padding: 0.75rem 0;
+                width: 100%;
+                border-radius: 1rem;
+                cursor: pointer;
+
+                img {
+                    padding: 0 1rem 0 0.5rem;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $darkGrey;
+                    font-size: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin: 0 0 0 0.5rem;
+                }
+            }
+
+            li.active {
+                background-color: $veryLightGreen;
+
+                a {
+                    color: $green;
+                }
+            }
+
+            li:hover {
+                background-color: $lightGrey;
+                transition: 0.25s;
+            }
+        }
+    }
+}
+
+.sidebar.active {
+    width: 3rem;
+    transition: 0.5s all;
+
+    .logoContainer.active {
+        h2.title {
+            opacity: 0;
+        }
+    }
+
+    .burgerContainer.active {
+        transition: 0.5s all;
+        .burgerMenu {
+            background-color: $white;
+            transition: 0.5s all;
+        }
+
+        .burgerMenu::before {
+            transform: translateY(0rem) rotate(0deg);
+            transition: 0.5s all;
+        }
+
+        .burgerMenu::after {
+            transform: translateY(0rem) rotate(0deg);
+            transition: 0.5s all;
+        }
+    }
+
+    .profileContainer {
+        .profileContents {
+            opacity: 0;
+        }
+    }
+
+    .contentsContainer {
+        a {
+            opacity: 0;
+        }
+    }
+}
